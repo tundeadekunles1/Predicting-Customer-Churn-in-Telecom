@@ -81,3 +81,38 @@ import sys
 print("Python:", sys.version)
 print("Pandas:", pd.__version__)
 print("Numpy:", np.__version__)
+
+## Exploratory Data Analysis (EDA)
+
+After cleaning and preprocessing, we conducted Exploratory Data Analysis (EDA) to extract actionable insights and guide feature engineering for the prediction task.
+
+### 1. Descriptive Statistics
+- Calculated basic statistics (mean, median, std, min, max, quartiles) for numeric features like `tenure`, `MonthlyCharges`, and `TotalCharges`.
+- Analyzed frequency distributions for categorical features including `gender`, `Partner`, `Dependents`, `InternetService`, `Contract`, and `PaymentMethod`.
+- Notable findings: Most customers have short tenure, moderately high monthly charges, and prefer month-to-month contracts. Churn rate is about 27%.
+
+### 2. Univariate Analysis
+- Plotted histograms for all numerical features to assess distribution shapes and outliers.
+    - **Tenure:** Right-skewed, indicating a large base of new customers.
+    - **MonthlyCharges/TotalCharges:** Broad range with a few high outliers.
+- Plotted bar charts for categorical features.
+    - Confirmed high representation for fiber optic internet, electronic check payment, and month-to-month contracts.
+
+### 3. Bivariate Analysis
+- Used boxplots to compare numeric features with churn:
+    - Churned users have lower tenure and total charges but higher monthly charges.
+- Used stacked bar plots to compare churn with categorical features:
+    - **Contract Type:** Month-to-month users churn significantly more often than longer-term contract holders.
+    - **Payment Method:** Electronic check customers have higher churn.
+    - **Internet Service:** Fiber optic customers churn more than DSL or no-internet users.
+
+### 4. Correlation Analysis
+- Visualized the correlation matrix (heatmap) for all encoded features.
+    - **Strongest predictors of churn:** month-to-month contracts, higher monthly charges, electronic check payment, and fiber optic internet.
+    - Features showed low multicollinearity, supporting their use as model inputs.
+
+### Key EDA Takeaways
+- Customers with short tenure, high monthly charges, month-to-month contracts, fiber optic internet, and electronic check payments are at highest churn risk.
+- Majority of input features are suitable for predictive modeling, supported by both visual and statistical EDA.
+
+Our EDA informed the engineering of new features and selection of variables for machine learning, laying the groundwork for model development and targeted retention strategies.
