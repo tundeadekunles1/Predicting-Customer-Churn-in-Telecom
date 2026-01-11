@@ -51,12 +51,10 @@ def train_logistic_regression(
             (
                 "logreg",
                 LogisticRegression(
-                    penalty=penalty,
                     C=C,
                     solver=solver,
                     max_iter=max_iter,
                     class_weight=class_weight,
-                    n_jobs=-1,
                     random_state=random_state,
                 ),
             ),
