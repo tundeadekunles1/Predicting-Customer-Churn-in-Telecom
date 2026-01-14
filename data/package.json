@@ -1,0 +1,15 @@
+{
+  "name": "predicting-customer-churn-in-telecom-_v1",
+  "version": "1.0.0",
+  "description": "End‑to‑end DSML group project to predict customer churn for a telecom company using the IBM Telco Customer Churn dataset. The repository follows a `src/` + `notebooks/` structure so analysis is transparent, reproducible, and easy to extend.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pptxgenjs": "^4.0.1"
+  }
+}
